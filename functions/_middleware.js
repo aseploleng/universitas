@@ -540,9 +540,9 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
         <amp-img class="logo" src="https://pub-bc2ee8893baf416c8c23af0718d51fc3.r2.dev/slotgacorwin.gif" width="200" height="50" layout="fixed" alt="${siteName.toUpperCase()}"></amp-img>
       </a>
     </div>
-    <nav class="main-nav">
-      <a href="https://tiganegara.pages.dev/" class="nav-link">Home</a>
-      <a href="https://tiganegara.pages.dev/" class="login-btn">Login ⭐️</a>
+   <div class="action-buttons">
+  <a class="register-btn" href="${loginUrl}" target="_blank">DAFTAR SEKARANG</a>
+  <a class="login-block-btn" href="${loginUrl}" target="_blank">LOGIN SLOT</a>
     </nav>
   </header>
   

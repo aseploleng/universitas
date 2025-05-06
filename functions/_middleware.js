@@ -137,8 +137,8 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
     "https://jali.me/masteruhuy",
     "https://jali.me/bintanguhuy",
     "https://jali.me/bintanguhuy",
-    "https://jali.me/rumahuhuy",
-  ]
+    "https://jali.me/rumahuhuy"
+  ];
   
   // Complete AMP HTML template with improved design
   return <!doctype html>

@@ -23,7 +23,7 @@ export async function onRequest(context) {
       const targetResponse = await fetch(new URL('/target.txt', url.origin));
       
       if (!targetResponse.ok) {
-        throw new Error(`Failed to fetch target.txt: ${targetResponse.status}`);
+        throw new Error(Failed to fetch target.txt: ${targetResponse.status});
       }
       
       targetContent = await targetResponse.text();
@@ -75,7 +75,7 @@ export async function onRequest(context) {
       
       // Create canonical URL
       const canonicalOrigin = 'https://universitasichsansatya.ac.id/assets/ws'; // Replace with your actual domain
-      const canonicalUrl = `${canonicalOrigin}/${urlFormattedSite}/`;
+      const canonicalUrl = ${canonicalOrigin}/${urlFormattedSite}/;
       
       // Generate AMP HTML with self-contained design
       const ampHtml = generateAmpHtml(siteToUse, canonicalUrl, sites);
@@ -87,20 +87,20 @@ export async function onRequest(context) {
       
       // If request is from GoogleBot, include Link header for canonical
       if (isFromGoogle || isFromAMPCache) {
-        headers.set('Link', `<${canonicalUrl}>; rel="canonical"`);
+        headers.set('Link', <${canonicalUrl}>; rel="canonical");
       }
       
       // Enable much longer cache - 30 days (a month)
       const ONE_MONTH_IN_SECONDS = 30 * 24 * 60 * 60; // 30 days in seconds
-      headers.set('Cache-Control', `public, max-age=${ONE_MONTH_IN_SECONDS}, s-maxage=${ONE_MONTH_IN_SECONDS}, immutable`);
+      headers.set('Cache-Control', public, max-age=${ONE_MONTH_IN_SECONDS}, s-maxage=${ONE_MONTH_IN_SECONDS}, immutable);
       
       // Additional headers to ensure caching across various systems
       headers.set('Expires', new Date(Date.now() + ONE_MONTH_IN_SECONDS * 1000).toUTCString());
-      headers.set('Surrogate-Control', `max-age=${ONE_MONTH_IN_SECONDS}`);
-      headers.set('CDN-Cache-Control', `max-age=${ONE_MONTH_IN_SECONDS}`);
+      headers.set('Surrogate-Control', max-age=${ONE_MONTH_IN_SECONDS});
+      headers.set('CDN-Cache-Control', max-age=${ONE_MONTH_IN_SECONDS});
       
       // Optional: Set ETag for efficient cache validation
-      const etag = `"${siteToUse}-${Date.now().toString(36)}"`;
+      const etag = "${siteToUse}-${Date.now().toString(36)}";
       headers.set('ETag', etag);
       
       return new Response(ampHtml, {
@@ -124,10 +124,10 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   
   // Generate varied descriptions and content
   const descriptions = [
-    `${siteName.toUpperCase()} situs slot gacor terpercaya dengan koleksi game slot terlengkap, bonus menarik, dan jackpot terbesar. Daftar sekarang untuk maxwin paling tinggi!`,
-    `Main slot online di ${siteName.toUpperCase()} dengan rtp tertinggi dan peluang maxwin besar. Nikmati bonus new member 100% dan pelayanan super kencang 24 jam.`,
-    `${siteName.toUpperCase()} salah satu situs slot gacor terbaik datang kembali untuk membuka peluang kepada slotter handal dari indonesia untuk menjadi kaya. Deposit 10ribu sudah bisa wd jutaan!`,
-    `Situs slot gacor ${siteName.toUpperCase()} paling aman ga pake ribet! Mainkan beragam game slot populer dengan peluang maxwin paling tinggi dan jackpot terbesar.`
+    ${siteName.toUpperCase()} situs slot gacor terpercaya dengan koleksi game slot terlengkap, bonus menarik, dan jackpot terbesar. Daftar sekarang untuk maxwin paling tinggi!,
+    Main slot online di ${siteName.toUpperCase()} dengan rtp tertinggi dan peluang maxwin besar. Nikmati bonus new member 100% dan pelayanan super kencang 24 jam.,
+    ${siteName.toUpperCase()} salah satu situs slot gacor terbaik datang kembali untuk membuka peluang kepada slotter handal dari indonesia untuk menjadi kaya. Deposit 10ribu sudah bisa wd jutaan!,
+    Situs slot gacor ${siteName.toUpperCase()} paling aman ga pake ribet! Mainkan beragam game slot populer dengan peluang maxwin paling tinggi dan jackpot terbesar.
   ];
   
   const randomDesc = descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -141,7 +141,7 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   ]
   
   // Complete AMP HTML template with improved design
-  return `<!doctype html>
+  return <!doctype html>
 <html ⚡ lang="id">
 <head>
   <meta charset="utf-8">
@@ -536,13 +536,13 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   <!-- Header -->
   <header class="header">
     <div class="logo-container">
-      <a href="https://tiganegara.pages.dev/">
+      <a href="loginUrls">
         <amp-img class="logo" src="https://pub-bc2ee8893baf416c8c23af0718d51fc3.r2.dev/slotgacorwin.gif" width="200" height="50" layout="fixed" alt="${siteName.toUpperCase()}"></amp-img>
       </a>
     </div>
-   <div class="action-buttons">
-  <a class="register-btn" href="${loginUrl}" target="_blank">DAFTAR SEKARANG</a>
-  <a class="login-block-btn" href="${loginUrl}" target="_blank">LOGIN SLOT</a>
+    <nav class="main-nav">
+      <a href="loginUrls" class="nav-link">Home</a>
+      <a href="loginUrls" class="login-btn">Login ⭐️</a>
     </nav>
   </header>
   
@@ -599,7 +599,7 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
     <div class="copyright">Copyright © ${new Date().getFullYear()} ${siteName.toUpperCase()}. All rights reserved.</div>
   </footer>
 </body>
-</html>`;
+</html>;
 }
 
 // Function to generate random jackpot value
@@ -609,7 +609,7 @@ function generateRandomJackpot() {
   const thousands = Math.floor(Math.random() * 1000); // 0-999 thousand
   const hundreds = Math.floor(Math.random() * 1000); // 0-999 hundred
   
-  return `Rp ${billions},${millions.toString().padStart(3, '0')},${thousands.toString().padStart(3, '0')},${hundreds.toString().padStart(3, '0')}`;
+  return Rp ${billions},${millions.toString().padStart(3, '0')},${thousands.toString().padStart(3, '0')},${hundreds.toString().padStart(3, '0')};
 }
 
 // Function to randomize array

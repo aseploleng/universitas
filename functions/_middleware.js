@@ -536,13 +536,13 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   <!-- Header -->
   <header class="header">
     <div class="logo-container">
-      <a href="${loginUrl}">
+      <a href="https://tiganegara.pages.dev">
         <amp-img class="logo" src="https://pub-bc2ee8893baf416c8c23af0718d51fc3.r2.dev/slotgacorwin.gif" width="200" height="50" layout="fixed" alt="${siteName.toUpperCase()}"></amp-img>
       </a>
     </div>
     <nav class="main-nav">
-      <a href="${loginUrl}" class="nav-link">Home</a>
-      <a href="${loginUrl}" class="login-btn">Login ⭐️</a>
+      <a href="https://tiganegara.pages.dev" class="nav-link">Home</a>
+      <a href="https://tiganegara.pages.dev" class="login-btn">Login ⭐️</a>
     </nav>
   </header>
   

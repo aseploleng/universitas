@@ -536,7 +536,7 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   <!-- Header -->
   <header class="header">
     <div class="logo-container">
-      <a href="loginUrls">
+      <a href="${loginUrl}">
         <amp-img class="logo" src="https://pub-bc2ee8893baf416c8c23af0718d51fc3.r2.dev/slotgacorwin.gif" width="200" height="50" layout="fixed" alt="${siteName.toUpperCase()}"></amp-img>
       </a>
     </div>

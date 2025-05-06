@@ -131,6 +131,21 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   ];
   
   const randomDesc = descriptions[Math.floor(Math.random() * descriptions.length)];
+
+    // Create array of login URLs to rotate through
+  const loginUrls = [
+    "https://jali.me/superuhuy",
+    "https://jali.me/bintanguhuy",
+    "https://jali.me/masteruhuy",
+    "https://jali.me/rumahuhuy"
+  ];
+  
+  // Convert the array to JSON string for AMP state
+  const loginUrlsJson = JSON.stringify(loginUrls);
+  
+  // Tambahkan timestamp acak ke HTML untuk mencegah caching
+  const timestamp = Date.now();
+  const randomValue = Math.random().toString(36).substring(2, 15);
   
   // Complete AMP HTML template with improved design
   return `<!doctype html>

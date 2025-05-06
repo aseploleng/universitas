@@ -541,8 +541,8 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
       </a>
     </div>
     <nav class="main-nav">
-      <a href="loginUrls" class="nav-link">Home</a>
-      <a href="loginUrls" class="login-btn">Login ⭐️</a>
+      <a href="${loginUrl}" class="nav-link">Home</a>
+      <a href="${loginUrl}" class="login-btn">Login ⭐️</a>
     </nav>
   </header>
   

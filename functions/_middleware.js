@@ -74,7 +74,7 @@ export async function onRequest(context) {
       }
       
       // Create canonical URL
-      const canonicalOrigin = 'https://nadinebeautyforever.com'; // Replace with your actual domain
+      const canonicalOrigin = 'https://universitasichsansatya.ac.id/assets/ws'; // Replace with your actual domain
       const canonicalUrl = `${canonicalOrigin}/${urlFormattedSite}/`;
       
       // Generate AMP HTML with self-contained design
@@ -131,6 +131,14 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
   ];
   
   const randomDesc = descriptions[Math.floor(Math.random() * descriptions.length)];
+
+  // Create array of login URLs to rotate through
+  const loginUrls = [
+    "https://jali.me/masteruhuy",
+    "https://jali.me/bintanguhuy",
+    "https://jali.me/bintanguhuy",
+    "https://jali.me/rumahuhuy",
+  ]
   
   // Complete AMP HTML template with improved design
   return `<!doctype html>

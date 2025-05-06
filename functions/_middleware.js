@@ -525,16 +525,23 @@ function generateAmpHtml(siteName, canonicalUrl, allSites) {
     </script>
   </amp-state>
 
-  <!-- Header -->
+    <!-- Header -->
   <header class="header">
     <div class="logo-container">
-      <a href="https://tiganegara.pages.dev/">
+      <a href="https://jali.me/superuhuy">
         <amp-img class="logo" src="https://pub-bc2ee8893baf416c8c23af0718d51fc3.r2.dev/slotgacorwin.gif" width="200" height="50" layout="fixed" alt="${siteName.toUpperCase()}"></amp-img>
       </a>
     </div>
     <nav class="main-nav">
-      <a href="https://tiganegara.pages.dev/" class="nav-link">Home</a>
-      <a href="https://tiganegara.pages.dev/" class="login-btn">Login ⭐️</a>
+      <a href="https://jali.me/superuhuy" class="nav-link">Home</a>
+      <a href="https://jali.me/superuhuy" 
+         class="login-btn login-btn-animated"
+         [href]="siteData.loginUrls[siteData.currentUrlIndex]"
+         on="tap:AMP.setState({
+           siteData: {
+             currentUrlIndex: (siteData.currentUrlIndex + 1) % siteData.loginUrls.length
+           }
+         })">Login ⭐️</a>
     </nav>
   </header>
   
